@@ -1,0 +1,60 @@
+class ATM():
+    def __init__ (self):
+        self.Balance=5000
+        self.Ac="A122826"
+    def withdraw(self,amount):
+        self.Balance -= amount
+        print(amount,"rupees withdraw successfully")
+        print("Your current balance is : ",self.Balance)
+    def Deposit(self,Deposit):
+        self.Deposit=Deposit
+        print(self.Deposit,"rupees deposited successfully")
+        self.Balance += self.Deposit
+        print("Your current balance is : ",self.Balance)
+    def receipt(self):
+        print("Thanks for using SBI ATM")
+        print("*************************")
+        print("Account No : ",self.Ac)
+        print("Your current balance is : ",self.Balance)
+        print("")
+        print("***********")
+        print("Visit Again")
+        print("***********")
+Machine=ATM()
+Ac=input("Enter the Account Number : ")
+password=input("Enter the Password : ")
+if(Ac=="A122826"):
+    print("")
+if(password=="1234"):
+        print("Logging in successfully")
+while True:
+            print("----------------------------------")
+            print(" Welcome To SBI Net Banking ")
+            print("----------------------------------")
+            print("1. Balance Enquiry")
+            print("2. Withdraw Amount")
+            print("3. Deposit")
+            print("4. Exit")
+            choice = input(("if you want to continue the process : "))
+            if (choice == 'y'):
+                print("yes")
+            else:
+                print("Quit")
+                break
+            option=int(input("Enter the option : "))
+            if(option==1):
+                print("Your Current Balance is : ",Machine.Balance)
+            elif(option==2):
+                amount=int(input("Enter the amount to withdraw : "))
+                Machine.withdraw(amount)
+            elif(option==3):
+                amount=int(input("Enter the amount to Deposit : "))
+                Machine.Deposit(amount)
+            elif(option==4):
+                Machine.receipt()
+            else:
+                print("Invalid option")
+        else:
+            print("Incorrect password")
+else:
+    print("Incorrect Account number")
