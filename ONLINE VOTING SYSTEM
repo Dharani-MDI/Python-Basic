@@ -1,0 +1,32 @@
+class e_voting:
+    def __init__(self,ID,slip,Aadhar,symbol1,symbol2):
+        self.ID=ID
+        self.slip=slip
+        self.Aadhar=Aadhar
+        self.symbol1=symbol1
+        self.symbol2=symbol2
+    def voter(self):
+        print("Find below candidates symbol to vote : ")
+        print("----------------------------------------")
+        print("1.symbol1 - Cup")
+        print("2.symbol2 - spoon")
+        symbol=input("Enter the candidate symbol : ")
+        if (symbol == "1"):
+            print(f"Thanks for Voting,You voted for {self.symbol1}")
+        elif (symbol == "2"):
+            print(f"Thanks for Voting,You voted for {self.symbol2}")
+        else:
+            print("Invalid choice")
+
+print("Welcome to E-voting portal")
+print("---------------------------")
+ID=input("Enter your ID number : ")
+if (ID == "123"):
+    option=input("If you have Voter ID slip (Y/N) :")
+if (option == "y") or (option == "y"):
+    slip=input("Enter your slip number : ")
+else:
+    Aadhar=input("Enter your Aadhar number : ")
+obj = e_voting("123", "111", "222", “Cup", “Spoon")
+obj.voter()
+
