@@ -1,0 +1,29 @@
+print("***Online Quiz management system***")
+print("------------------------------------")
+option=input("If you want to play (Y/N)? : ")
+score=0
+if (option == "Y") or (option == "y"):
+    print("Let's start a game")
+else:
+    print("Quit")
+questions=input("How many days in a week ? : ")
+if questions=="7":
+    print("Correct")
+    score += 1
+else:
+    print("Incorrect")
+questions=input("First letter of Alphabets ? : ")
+if (questions == "A") or (questions == "a"):
+    print("Correct")
+    score += 1
+else:
+    print("Incorrect")
+questions=input("2+2 ? : ")
+if questions=="4":
+    print("Correct")
+    score += 1
+else:
+    print("Incorrect")
+print("Quiz has been completed")
+print("you scored" + " " + str(score) + " " +"mark")
+print("you got" + "  " + str((score/3)*100) + "%")
