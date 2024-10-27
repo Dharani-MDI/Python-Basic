@@ -1,0 +1,21 @@
+class card:
+    def generate_id(self,name,designation,company,ID):
+        self.name=name
+        self.designation=designation
+        self.company=company
+        self.ID=ID
+    def employee_ID(self):
+        print("--------------------------")
+        print("Your ID card is Generated")
+        print("--------------------------")
+        print(f"Name: {name}")
+        print(f"Designation: {designation}")
+        print(f"Company: {company}")
+        print(f"ID Number: {ID}")
+obj=card()
+obj.generate_id("John Doe", "Software Engineer", "Tech Corp", "123456")
+name=input("Enter your name : ")
+designation=input("Enter your Designation : ")
+company=input("Enter your company name : ")
+ID=int(input("Enter your ID : "))
+obj.employee_ID()
