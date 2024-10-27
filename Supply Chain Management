@@ -1,0 +1,57 @@
+class supply:
+    def __init__(self,stock=15,item="kurti"):
+        self.stock=stock
+        self.item=item
+    def Astock(self, stock=15):
+        self.stock = stock
+        print("Available stocks are : ", self.stock)
+    def update_q(self,quantity):
+         self.quantity =quantity
+         self.stock=self.quantity+self.stock
+         print("Updated quantity",self.stock)
+         print("Available stocks are : ",self.stock)
+    def order(self,purchase):
+         self.purchase = purchase
+         if self.purchase > self.stock:
+            print("Please select a product quantity below 15")
+         else:
+            print(f"{purchase} purchased {self.item}")
+            Remaining_stock = self.stock - self.purchase
+            print("The remaining stocks are : ",Remaining_stock)
+    def shipping(self,amount=10):
+         self.amount=amount
+         scharge = int(input("How many products want to order : "))
+         purchase=self.amount*scharge
+         print("Shipping charge is : ",purchase)
+def raw_material(self,purchase):
+     print("Stocks are : ",self.stock)
+     print("Available product are : ",self.purchase)
+     material=self.stock-self.purchase
+     print("We have to purchase raw materials : ",material)
+
+chain=supply()
+print("******************************************")
+print("Welcome to supply chain management system")
+print("*******************************************")
+print("1.Available stock")
+print("2.order")
+print("3.shipping amount")
+print("4.update_quantity")
+print("5.raw_material")
+while True:
+ choice=int(input("Enter the option to show the product details : "))
+ if(choice==1):
+    chain.Astock()
+ elif(choice==2):
+    purchase = int(input("How many products want to order : "))
+    chain.order(purchase)
+ elif(choice==3):
+    chain.shipping()
+ elif(choice==4):
+    quantity = int(input("How much quantity of product purchased : "))
+    chain.update_q(quantity)
+ elif(choice==5):
+    chain.raw_material()
+    break
+else:
+ print("Invalid option")
